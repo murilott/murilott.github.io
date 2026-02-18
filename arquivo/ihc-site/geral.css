@@ -1,0 +1,16 @@
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+html {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+.separador {
+    height: 80px;
+    background-color: #00524A;
+    border-top: 4px solid #F2CE16;
+    border-bottom: 4px solid #F2CE16;
+}

@@ -1,0 +1,78 @@
+.carrinho {
+    background: url(img/fundo-amarelo.png) no-repeat center center;
+    background-size: cover;
+    padding: 60px 10px;
+}
+.carrinho-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-items: end;
+    align-items: center;
+    color: #000;
+}
+.carrinho-capacete {
+    display: grid;
+    gap: 20px;
+}
+.carrinho-capacete div {
+    font-size: 1.5rem;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    border: 3px solid #027368;
+    line-height: 1.2em;
+    padding: 5px;
+}
+.carrinho-capacete div p {
+    max-width: fit-content;
+}
+.carrinho-final {
+    background-color: #027368;
+    border-radius: 10px;
+    padding: 40px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+#tot {
+    border-top: 1px solid #fff;
+}
+
+@media only screen and (min-width:360px) and (max-width:735px) {
+
+    .carrinho-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+    .carrinho-capacete {
+        grid-template-columns: 1fr 1fr;
+    }
+    .carrinho-capacete div {
+        font-size: 1rem;
+    }
+    
+}
+
+@media only screen and (min-width:0px) and (max-width:359px) {
+
+    .carrinho-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+    .carrinho-capacete {
+        grid-template-columns: 1fr;
+    }
+    .carrinho-capacete div {
+        font-size: 1rem;
+    }
+    .carrinho-final {
+        background-color: #027368;
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+        font-size: 1rem;
+    }
+}

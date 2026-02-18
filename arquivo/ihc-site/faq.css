@@ -1,0 +1,117 @@
+.faq {
+    background-color: #181617;
+    background: url(img/fundo-verde.png) no-repeat center center;
+    background-size: cover;
+    padding: 100px 10px;
+}
+
+.faq-title {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: #00524A;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+
+.faq-list {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    margin-top: 20px;
+}
+
+.faq-list dt{
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #00524A;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.faq-list dd{
+    color: #00524A;
+    margin-top: 20px;
+    font-style: italic;
+    background-color: rgb(192, 192, 192);
+    padding: 20px;
+    transition: .4s;
+}
+/*Accordion*/
+.js-accordion dd {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    background-color: #F2CE16;
+  }
+  .js-accordion dt {
+    cursor: pointer;
+    padding: 5px;
+  }
+
+
+  .js-accordion dt::after {
+    content: url(img/faq1.svg);
+    transition: .4s;
+  }
+
+  .js-accordion dt.ativo::after {
+    transform: rotateX(180deg);
+  }
+
+  .js-accordion +   .js-accordion {
+    margin-top: 20px;
+  }
+
+  .js-accordion dt.ativo {
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    
+  }
+  
+  .js-accordion dd.ativo {
+    margin-top: 0px;
+    display: block;
+    position: inherit;
+    animation: showAccordionDown .4s;
+    text-align: center;
+    padding-bottom: 20px;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  @keyframes showAccordionDown {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @media only screen and (min-width:310px) and (max-width:549px) {
+
+    .faq-list dt{
+        font-size: .9rem;
+    }
+    
+  }
+  @media only screen and (min-width:0px) and (max-width:309px) {
+
+
+    .faq-list dt{
+        font-size: .9rem;
+    }
+    .faq-title span {
+        width: 50px;
+    }
+    
+  }

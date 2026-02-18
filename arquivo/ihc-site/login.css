@@ -1,0 +1,214 @@
+.login1 {
+    padding: 140px 10px;
+    background: url(img/fundo-login.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.login1-grid {
+    max-width: fit-content;
+    background-color: #027368;
+    display: grid;
+    justify-items: center;
+    padding: 40px;
+    border: 3px solid #F2CE16;
+    border-radius: 15px;
+    position: relative;
+}
+.login1-grid input {
+    color: #000;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    outline: solid 2px #F2CE16;
+    border-radius: 5px;
+}
+.login1-grid label {
+    margin-right: auto;
+}
+.login1 h1 {
+    padding: 5px 75px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 0px 2px #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.login1-grid > a {
+    border-radius: 90px;
+    padding: 5px 25px;
+    font-size: .95rem;
+    background: #F2A007;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.login1-grid > a:hover {
+    background: #F2CE16;
+}
+.login1-grid > div {
+    display: flex;
+    background-color: #053d38;
+    position: absolute;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    gap: 5px;
+    padding: 15px 40px;
+    border: 3px solid #F2CE16;
+    bottom: -30px;
+}
+.login1-grid > div > a {
+    text-decoration: underline;
+    transition: .3s;
+}
+.login1-grid > div > a:hover {
+    color: #F2CE16;
+}
+
+@media only screen and (max-width: 395px) {
+
+    .login1-grid input {
+        color: #000;
+        max-width: 200px;
+    }
+    .login1-grid > div {
+        display: flex;
+        flex-direction: column;
+        bottom: -40px;
+    }
+    .login1-grid > a {
+        margin-bottom: 40px;
+    }
+    .login1-grid {
+        padding: 20px;
+    }
+    .login1 h1 {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        padding: 5px 25px;
+    }
+}
+
+#etapa1 {
+    color: #F2CE16;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+
+
+
+.login2 {
+    padding: 140px 10px;
+    background: url(img/fundo-login.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.login2-grid {
+    max-width: fit-content;
+    background-color: #027368;
+    display: grid;
+    justify-items: center;
+    padding: 40px;
+    border: 3px solid #F2CE16;
+    border-radius: 15px;
+    position: relative;
+}
+.login2-grid input {
+    color: #000;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    outline: solid 2px #F2CE16;
+    border-radius: 5px;
+}
+.login2-grid label {
+    margin-right: auto;
+}
+.login2 h1 {
+    padding: 5px 75px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 0px 2px #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.login2-grid > a {
+    border-radius: 90px;
+    padding: 5px 25px;
+    font-size: .95rem;
+    background: #F2A007;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.login2-grid > a:hover {
+    background: #F2CE16;
+}
+.login2-grid > div {
+    display: flex;
+    background-color: #053d38;
+    position: absolute;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    gap: 5px;
+    padding: 15px 40px;
+    border: 3px solid #F2CE16;
+    bottom: -30px;
+}
+.login2-grid > div > a {
+    text-decoration: underline;
+    transition: .3s;
+}
+.login2-grid > div > a:hover {
+    color: #F2CE16;
+}
+
+@media only screen and (min-width: 409px) and (max-width: 480px) {
+
+    .login2-grid input {
+        color: #000;
+        max-width: 200px;
+    }
+    .login2-grid > div {
+        display: flex;
+        flex-direction: column;
+        bottom: -40px;
+    }
+    .login2-grid > a {
+        margin-bottom: 40px;
+    }
+    .login2-grid {
+        padding: 20px;
+    }
+    .login2 h1 {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 408px) {
+
+    .login2-grid input {
+        color: #000;
+        max-width: 180px;
+    }
+    .login2-grid > div {
+        display: flex;
+        flex-direction: column;
+        bottom: -40px;
+    }
+    .login2-grid > a {
+        margin-bottom: 40px;
+    }
+    .login2-grid {
+        padding: 20px;
+    }
+    .login2 h1 {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        padding: 5px 25px;
+    }
+    .login2-grid label {
+        font-size: .9rem;
+    }
+}

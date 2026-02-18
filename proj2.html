@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Murilo</title>
+</head>
+<!-- /* https://www.freepik.com/free-photo/cement-texture_1035499.htm#fromView=search&page=1&position=21&uuid=b17eff33-c716-4084-9291-5bd7260ff065 */ -->
+
+
+<body>
+    <div class="page">
+        <main class="content">
+            <h1>Murilo</h1>
+
+            <hr>
+            <br>
+
+            <a href="../">Voltar</a>
+
+            <div class="header">
+                <h2>NimbusMart</h2>
+            </div>
+
+            <p>
+                E-commerce baseado em microserviços inspirado na Amazon, 
+                utilizando React + TypeScript no frontend e Spring Boot no backend, 
+                com inventário, produtos, pedidos, entregas e pagamentos.
+            </p>
+
+            <p>
+                O projeto foi desenvolvido no Github Codespace, que já vem com docker configurado e permite rodar facilmente.
+                No entanto, a limitação de horas mensais gratuitas atrasou a finalização do projeto.
+            </p>
+            
+            <p>
+                É possível cadastrar produtos e fazer pedidos, simulando um sistema de pagamento, entrega e controle de estoque.
+            </p>
+            
+            <p>
+                A parte de autenticação pode ser feita no futuro, com base no meu outro projeto, SecureUserAuth.
+                Optei por não fazer para não aumentar o escopo do projeto, para não atrasar muito a finalização e
+                para não pesar muito o Codespace.
+            </p>
+
+            <p>
+                O Redpanda foi escolhido por ser mais fácil de configurar e por ser mais leve.
+            </p>
+
+            <h4>Desafios</h4>
+            <p>
+                Implementar o gRPC e o Redpanda foram as partes mais chatinhas e demoradas.
+            </p>
+
+            <h4>Pontos de atenção:</h4>
+            <ul>
+                <li>Cada serviço tem sua própria responsabilidade e são independentes, respeitando os princípios do DDD.</li>
+                <li>A arquitetura hexagonal é utilizada para manter as classes organizadas e concisas.</li>
+                <li>As classes de domínio são independentes e utlizam somente anotações JPA (de banco), contendo as regras de negócio e validações necessárias.</li>
+                <li>Classes de DTO e entidade com responsabilidades bem separadas.</li>
+                <li>Em várias camadas são feitas validações e tratamentos de erros.</li>
+                <li>Utiliza-se gRPC para validação síncrona entre serviços ao criar entidades.</li>
+                <li>O Redpanda (Kafka) é responsável por enviar objetos de forma asíncrona, sinalizando mudanças de estado em outros serviços.</li>
+            </ul>
+
+            <h4>Serviços:</h4>
+            <ul>
+                <li>Produto: cria um produto com nome, descrição e tags</li>
+                <li>Inventário: recebe produto, quantidade e valor para criar um item no estoque, armazenado no Inventário</li>
+                <li>Pedido: recebe um item de inventário junto com a quantidade selecionada</li>
+                <li>Pagamento: recebe um pedido e um pagamento para confirmar a transação; cadastro de pagamentos</li>
+                <li>Entrega: recebe um pedido finalizado, orquestra as mudanças durante entrega</li>
+                <li>Frontend: responsável pelas telas que o usuário navega</li>
+                <li>Gateway-service: reúne os endpoints de todos os serviços em um só</li>
+                <li>Service-discovery: cadastra os serviços para que sejam utilizados pelo gateway, por exemplo</li>
+            </ul>
+            
+            <h4>Possíveis implementações:</h4>
+            <ul>
+                <li>Autenticação: com tokens JWT e autenticação por cargo</li>
+            </ul>
+
+            <h4>Tecnologias:</h4>
+            <ul>
+                <li>Backend: Java/Spring Boot</li>
+                <li>Frontend: React/Typescript</li>
+                <li>Banco: H2 em arquivo local (para todos os serviços)</li>
+                <li>Docker: para subir e rodar os serviços</li>
+                <li>Comunicação síncrona: gRPC, com serviço de contrato compartilhado</li>
+                <li>Comunicação asíncrona: Redpanda (protocolo Kafka)</li>
+                <li>Maven multi-módulo: reúne todos os poms do projeto, permite importação para serviço de arquivos compartilhados(gRPC)</li>
+                <li>Script em Python para criar todos os diretórios em cada projeto automaticamente</li>
+            </ul>
+
+            <span>Repositório do Github:</span> <a href="http://github.com/murilott/nimbusmart">github.com/murilott/nimbusmart</a>
+
+            <h4>Imagens</h4>
+            <br>
+            <hr>
+        </main>
+
+        <footer class="footer">
+            Imagem de fundo por <a href="http://www.freepik.com/">Freepik</a>
+        </footer>
+    </div>
+</body>
+
+</html>

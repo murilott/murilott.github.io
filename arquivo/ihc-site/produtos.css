@@ -1,0 +1,107 @@
+.produtos {
+    padding: 100px 10px;
+    background: url(img/fundo-vermelho.png) no-repeat center center;
+    background-size: cover;
+}
+.produtos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: baseline;
+    justify-items: center;
+    color: #000;
+    gap: 40px;
+}
+.capacete {
+    display: grid;
+    justify-items: center;
+    position: relative;
+}
+#capa {
+    padding-bottom: 19px;
+}
+.capacete > h4 {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #FAFF00;
+    padding: 1px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 0px #797979;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.capacete:hover > h4 {
+    animation: novo 3s infinite;
+}
+.capacete > h2 {
+    font-size: 1.8rem;
+    font-family: 'julius_sans';
+}
+.capacete > h3 {
+    color: #00524A;
+    font-size: 1.5rem;
+}
+.capacete img {
+    transition: .3s;
+}
+.capacete:hover img {
+    transform: scale(1.05);
+}
+.capacete:hover h2 {
+    color: #FAFF00;
+    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000;
+}
+
+@keyframes novo {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 3px 5px 0px #797979;
+    }
+
+    50% {
+        box-shadow: 0px 3px 5px 0px #414141;
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 3px 5px 0px #797979;
+    }
+    
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1140px) {
+
+    .produtos-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: baseline;
+        justify-items: center;
+        color: #000;
+        gap: 40px;
+    }
+    
+    .produtos-grid > a:nth-child(3) {
+
+        grid-column: 1/3;
+
+    }
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 699px) {
+
+    .produtos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .capacete > h2 {
+        font-size: 1.3rem;
+    }
+    .capacete > h3 {
+        font-size: 1.1rem;
+    }
+
+}

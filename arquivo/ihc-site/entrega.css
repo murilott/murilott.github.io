@@ -1,0 +1,71 @@
+.entrega {
+    background: url(img/fundo-amarelo.png) no-repeat center center;
+    background-size: cover;
+}
+.entrega-grid {
+    padding: 100px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    color: #000;
+}
+.entrega-grid div {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+.entrega-grid div p {
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+.mais {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width:630px) and (max-width:1020px) {
+
+    .entrega-grid {
+        padding: 100px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        color: #000;
+    }
+    .mais img {
+        max-width: 200px;
+    }
+    
+}
+
+@media only screen and (min-width:390px) and (max-width:629px) {
+
+    .entrega-grid {
+        padding: 100px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        color: #000;
+    }
+    .mais img {
+        max-width: 120px;
+    }
+    
+}
+
+@media only screen and (min-width:0px) and (max-width:389px) {
+
+    .entrega-grid {
+        padding: 100px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        color: #000;
+    }
+    .mais img {
+        display: none;
+    }
+    
+}

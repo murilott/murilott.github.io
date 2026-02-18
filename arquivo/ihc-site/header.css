@@ -1,0 +1,114 @@
+.top-menu {
+    height: 60px;
+    background-color: #027368;
+}
+.top-menu2 {
+    height: 60px;
+    background-color: #027368;
+    border-bottom: 4px solid #F2CE16;
+}
+
+.header {
+    padding: 40px 10px;
+    border-top: 4px solid #F2CE16;
+    border-bottom: 4px solid #F2CE16;
+}
+
+
+.header-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 20px;
+    justify-items: end;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+.logo img {
+    margin-left: 10px;
+    max-width: 200px;
+}
+
+.nav-menu {
+    display: flex;
+    color: #000;
+    align-self: center;
+    align-items: center;
+    grid-gap: 50px;
+}
+.nav-menu div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.nav-menu > div > a:hover {
+    box-shadow: 0px 0px 0px 40px #027368 inset;
+}
+.nav-menu > div > a {
+    background-color: #ffffff00; 
+    box-shadow: 0px 0px 0px 2px #027368 inset;
+    border-radius: 90px;
+    width: 70px;
+    height: 70px;
+    padding: 0px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: .3s;
+}
+.nav-menu > a {
+    font-weight: 700;
+    transition: .3s;
+}
+.nav-menu > a::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #027368;
+    transition: .3s ease-in-out;
+    margin-left: auto;
+}
+.nav-menu > a:hover::after {
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0px;
+}
+
+@media only screen and (min-width:895px) and (max-width:1018px) {
+    .nav-menu {
+        grid-gap: 15px;
+    }
+    .nav-menu div:last-child {
+        margin-left: 50px;
+    }
+} 
+@media only screen and (min-width:321px) and (max-width:894px) {
+    .nav-menu {
+        grid-gap: 15px;
+    }
+    .nav-menu div:last-child {
+        margin-left: 0px;
+    }
+    .nav-menu div {
+        gap: 10px;
+        margin-left: 50px;
+    }
+} 
+
+@media only screen and (max-width:320px) {
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr .2fr;
+    }
+    .nav-menu div:last-child {
+        margin-left: 0px;
+    }
+    .logo img {
+        margin-left: 10px;
+        max-width: 190px;
+    }
+}

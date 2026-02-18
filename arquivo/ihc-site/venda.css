@@ -1,0 +1,63 @@
+.venda {
+    background: url(img/fundo-amarelo.png) no-repeat center center;
+    background-size: cover;
+    color: #000;
+}
+.venda-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 80px;
+}
+
+.venda-content {
+    display: grid;
+    justify-items: center;
+}
+.venda-info {
+    padding: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #d8d8d8;
+    max-width: fit-content;
+    border: 3px solid #027368;
+}
+.venda-info p:nth-child(1) {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.venda-info h2 {
+    font-size: 1.1rem;
+    color: #027368;
+    font-weight: 700;
+}
+
+.paga {
+    background-color: #027368;
+    color: #fff;
+    outline-color: #F2CE16;
+}
+
+@media only screen and (max-width:770px) {
+    .venda-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 80px;
+    }
+    .venda-info {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #d8d8d8;
+        max-width: fit-content;
+        border: 3px solid #027368;
+    }
+}
+
+@media only screen and (max-width:310px) {
+    .venda-info p:nth-child(1) {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+}

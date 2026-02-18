@@ -1,0 +1,109 @@
+.main {
+    background: url(img/main-fundo.png) no-repeat center center;
+    background-size: cover;
+    padding: 100px 10px;
+    padding-top: 80px;
+    border-bottom: 4px solid #F2CE16;
+}
+.main-title h1 > span {
+    color: #FFE665;
+}
+.main-title h1 {
+    text-align: center;
+    font-size: 2.18rem;
+    font-family: 'julius_sans';
+    color: #fff;
+    line-height: 1.2em;
+}
+.main-title {
+    margin-bottom: 70px;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.main-grid img {
+    border: 2px solid #FFE665;
+}
+.main-content {
+    display: grid;
+    align-items: center;
+    text-align: end;
+    justify-items: end;
+    max-width: 410px;
+    gap: 20px;
+}
+.main-content p {
+    font-size: 1.45rem;
+    line-height: 1.2em;
+}
+
+@media only screen and (min-width:460px) and (max-width:1005px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+    .main-content {
+        align-items: center;
+        text-align: center;
+        grid-row: 2;
+    }
+    .main-title {
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media only screen and (min-width:354px) and (max-width:459px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+    .main-content {
+        align-items: center;
+        text-align: center;
+        grid-row: 2;
+        gap: 20px;
+    }
+    .main-content p {
+        font-size: 1rem;
+    }
+    .main-title {
+        margin-bottom: 40px;
+    }
+    .main-title h1 {
+        font-size: 1.6rem;
+    }
+    
+}
+@media only screen and (min-width:0px) and (max-width:353px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+    .main-content {
+        align-items: center;
+        text-align: center;
+        grid-row: 2;
+        gap: 20px;
+    }
+    .main-content p {
+        font-size: .95rem;
+    }
+    .main-title {
+        margin-bottom: 40px;
+    }
+    .main-title h1 {
+        font-size: 1.3rem;
+    }
+    
+}

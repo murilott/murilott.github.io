@@ -1,0 +1,40 @@
+.footer {
+    border-top: 4px solid #F2CE16;
+    background-color: #00524A;
+    padding: 50px 10px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.f-logo {
+    max-width: 200px;
+}
+.footer-grid a {
+    transition: .3s;
+}
+.footer-grid a:hover {
+    color: #F2CE16;
+}
+.f-contato {
+    display: grid;
+    gap: 15px;
+}
+.f-contato a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 690px) {
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+}

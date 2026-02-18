@@ -1,0 +1,82 @@
+body {
+    height: 100%;
+    margin: 0 100px;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+    font-family: 'Bitter', serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 450;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: rgb(248, 255, 255);
+    padding: 15px 5px;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top: 2px solid rgb(192, 230, 230);
+    border-left: 2px solid rgb(192, 230, 230);
+    border-right: 2px solid rgb(192, 230, 230);
+}
+
+.header {
+    border-bottom: 1px solid;
+    width: 150px;
+}
+
+.projeto {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 100%;
+    background-color: rgb(255, 254, 250);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+.projeto:hover {
+    transform: scale(1.02);
+}
+
+.projeto:active {
+  transform: scale(0.98);
+}
+
+.projeto-lista {
+    overflow-y: auto;
+    max-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.link {
+    display: block; 
+    margin: 10px;
+    width: 35vw;
+}
+
+.link:link, .link:visited, .link:hover, .link:active {
+  text-decoration: none;
+  color: inherit;
+}
