@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Murilo</title>
+</head>
+<!-- /* https://www.freepik.com/free-photo/cement-texture_1035499.htm#fromView=search&page=1&position=21&uuid=b17eff33-c716-4084-9291-5bd7260ff065 */ -->
+
+
+<body>
+    <div class="page">
+        <main class="content">
+            <h1>Murilo</h1>
+
+            <hr>
+            <br>
+
+            <a href="../">Voltar</a>
+
+            <div class="header">
+                <h2>QuadraJá</h2>
+            </div>
+
+            <p>
+                Aplicativo de aluguel de quadras feito com microserviços em Spring Boot,
+                React e RabbitMQ.
+            </p>
+
+            <p>
+                Este trabalho foi desenvolvido para aula de Tópicos Avançados em Programação I.
+                O projeto foi feito no Github Codespace, que já vem com docker configurado e permite rodar facilmente.
+                No entanto, a limitação de horas mensais gratuitas atrasou a finalização do projeto.
+            </p>
+            
+            <p>
+                É possível cadastrar quadras e fazer alugéis, simulando um sistema de pagamento e reservas.
+            </p>
+            
+            <p>
+                É necessário criar um usuário. O login emite access tokens, porém as rotas não requerem autenticação por limitação de tempo.
+            </p>
+
+            <p>
+                Para comunicação entre serviços foi utilizado o RabbitMQ.
+            </p>
+
+            <h4>Serviços:</h4>
+            <ul>
+                <li>Quadra: cria quadras com preço, lugar e categoria</li>
+                <li>Pagamento: cadastro de pagamentos e adição de pagamentos à lista do usuário (logado)</li>
+                <li>Reserva: recebe uma quadra, data para reserva, pagamento e usuário. O pagamento tem que estar na lista do usuário para ser válido</li>
+                <li>Autenticação: com tokens JWT e autenticação por cargo; responsável pela criação de usuários</li>
+                <li>Frontend: responsável pelas telas que o usuário navega</li>
+                <li>Gateway-service: reúne os endpoints de todos os serviços em um só</li>
+                <li>Service-discovery: cadastra os serviços para que sejam utilizados pelo gateway, por exemplo</li>
+            </ul>
+            
+            <h4>Tecnologias:</h4>
+            <ul>
+                <li>Backend: Java/Spring Boot</li>
+                <li>Frontend: React/Typescript</li>
+                <li>Banco: H2 em arquivo local (para todos os serviços)</li>
+                <li>Docker: para subir e rodar os serviços</li>
+                <li>Comunicação entre serviços: RabbitMQ</li>
+            </ul>
+
+            <span>Repositório do Github:</span> <a href="http://github.com/murilott/quadraja">github.com/murilott/quadraja</a>
+
+            <h4>Imagens</h4>
+            <br>
+            <hr>
+        </main>
+
+        <footer class="footer">
+            Imagem de fundo por <a href="http://www.freepik.com/">Freepik</a>
+        </footer>
+    </div>
+</body>
+
+</html>
